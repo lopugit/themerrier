@@ -1,0 +1,14 @@
+{
+	// "extends": [
+	// 	"react-app"
+	// 	,
+	// 	"plugin:react-pug/all"
+	// ]
+	// ,
+	// "plugins": [
+  //       "react-pug"
+	// ],
+	// "rules": {
+	// 	"react-pug/no-undef": "off"
+	// }
+}
