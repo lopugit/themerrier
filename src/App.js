@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import Sections from './components/Sections'
 import Headroom from 'react-headroom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -15,9 +16,8 @@ var greenpaddock = require('./assets/img/green-paddock.jpeg')
 var wewantyou = require('./assets/img/wewantyou.jpg')
 
 class App extends Component {
-		constructor(props){
+	constructor(props){
 		super(props)
-
 		this.state = {
 			sections: [
 				{
@@ -61,7 +61,11 @@ class App extends Component {
 						value: {
 							values: [
 								<Headroom disableInlineStyles>
-									<div className={"skipintro"}>skip intro</div>
+									<a href="#moreinfo"
+										className={"skipintro"}
+									>
+										skip intro
+									</a>
 								</Headroom>,
 								"We believe society lost it's way some time ago.",
 								"We're going to change the world for the better."

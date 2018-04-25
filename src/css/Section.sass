@@ -25,6 +25,7 @@
 	background-position: center center
 	max-width: 100%
 	.texts,
+	.parallax-texts,
 	.react-reveal
 		margin-bottom: 0px
 		$font-size: 90px
@@ -41,6 +42,7 @@
 	@media(max-width: 1320px)
 		padding: 100px 80px 100px 80px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			// $font-size: $font-size
 			// font-size: $font-size
@@ -49,6 +51,7 @@
 	@media(max-width: 1275px)
 		padding: 100px 80px 100px 80px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			$font-size: 75px
 			font-size: $font-size
@@ -57,6 +60,7 @@
 	@media(max-width: 1120px)
 		padding: 100px 60px 40px 60px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			$font-size: 60px
 			font-size: $font-size
@@ -65,6 +69,7 @@
 	@media(max-width: 900px)
 		padding: 100px 30px 50px 50px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			margin-bottom: 40px
 		.parallax-image
@@ -74,6 +79,7 @@
 	@media(max-width: 680px)
 		padding: 100px 30px 50px 50px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			margin-bottom: 40px
 	// @media(max-width: 600px)
@@ -82,6 +88,7 @@
 		padding-top: 100px
 		padding-bottom: 50px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			$font-size: 40px
 			font-size: $font-size
@@ -90,6 +97,7 @@
 	@media(max-width: 350px)
 		padding: 100px 30px 30px 30px
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			$font-size: 35px
 			font-size: $font-size
@@ -119,6 +127,7 @@
 		.section
 			padding-bottom: 80px
 			// .texts,
+			// .parallax-texts,
 			// .react-reveal
 			// 	$font-size: 60px
 			// 	font-size: $font-size
@@ -128,6 +137,7 @@
 		padding-top: 170px !important
 		padding-bottom: 170px !important
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			margin-bottom: 0px
 		@media(max-width: 700px)
@@ -143,6 +153,7 @@
 				// margin-top: -10px
 				// left: 0
 			.texts,
+			.parallax-texts,
 			.react-reveal
 				margin-bottom: 20px
 #powerback
@@ -155,26 +166,53 @@
 
 			// padding: 40px
 			.texts,
+			.parallax-texts,
 			.react-reveal
 				margin-bottom: 20px
 #peoplepassion
 	.section
-		// @media(max-width: 600px)
-
+		@media(max-width: 1000px)
+			.parallax-texts
+					&.n1
+						// background: black
+						.parallax-inner
+							max-width: 1000px !important
+							margin-left: -5%
+		@media(max-width: 700px)
+			.parallax-texts
+					&.n2
+						// background: black
+						.parallax-inner
+							max-width: 1000px !important
+							margin-left: 10%
 #impact
-	.texts-parallax
+	.parallax-texts
 		&.n1
 			// background: black
 			.parallax-inner
-				max-width: 1000px !important
+				max-width: 800px !important
 				margin-left: 30%
 	.section
 		padding-top: 180px !important
 		padding-bottom: 300px !important
+		@media(max-width: 900px)
+			.parallax-texts
+				&.n1
+					// background: black
+					.parallax-inner
+						max-width: 800px !important
+						margin-left: 8%
+		@media(max-width: 800px)
+			.parallax-texts
+				&.n1
+					// background: black
+					.parallax-inner
+						max-width: 800px !important
+						margin-left: -2%
 		@media(max-width: 700px)
 			padding-top: 140px !important
 			padding-bottom: 140px !important
-		
+
 #wewantyou
 	.section
 		padding-top: 210px !important
@@ -187,6 +225,11 @@
 			background-size: auto
 			padding-top: 140px !important
 			padding-bottom: 140px !important
+			.parallax-image
+				top: -5%
+				width: 170%
+				height: 170%
+
 		@media(max-width: 600px)
 			.parallax-image
 				top: -5%
@@ -195,6 +238,7 @@
 #moreinfo
 	.section
 		.texts,
+		.parallax-texts,
 		.react-reveal
 			width: 100%
 			max-width: 100%

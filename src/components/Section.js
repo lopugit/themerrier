@@ -25,7 +25,6 @@ class Section extends Component {
 					var flip = this.state.section.content.flip || false
 					for(var i=0; i < this.state.section.content.value.values.length; i++){
 						var noReact = this.state.section.content.noReactOn && this.state.section.content.noReactOn.indexOf && this.state.section.content.noReactOn.indexOf(i) >= 0
-						console.log(this.state.section.content)
 						if(!this.state.section.content.noAnimateOnScroll && !noReact){
 							if(!this.state.section.content.noTextParallax){
 								// var subcontent = <Fade 
@@ -37,7 +36,7 @@ class Section extends Component {
 									// 									className="texts" 
 									// 									>
 									// 									<Parallax
-									// 										className="texts-parallax"
+									// 										className="parallax-texts"
 									// 										offsetXMax={(flip ? offsetXMin : offsetXMax - 5) +'%'}
 									// 										offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
 									// 									>
@@ -46,8 +45,8 @@ class Section extends Component {
 									// 								</Fade>
 
 								var subcontent = <Parallax
-																	className={"texts-parallax n"+i}
-																	offsetXMax={(flip ? '8%' : '5%')}
+																	className={"parallax-texts n"+i}
+																	offsetXMax={(flip ? '8%' : '7%')}
 																	offsetXMin={(flip ? '24%' : '-5%')}
 																>
 																	<div >{ this.state.section.content.value.values[i] }</div>
@@ -90,6 +89,7 @@ class Section extends Component {
 			return <div 
 							className={"section-container "+(this.state.section.bgImage ? 'parallax-section-container' : '')} 
 							id={this.state.section.id}
+							ref={this.state.section.id}
 							>
 					<div className="section-positioner">
 						<div className={"section "+ this.state.section.classes } style={this.state.section.style}>

@@ -50,6 +50,8 @@ div
 		opacity: 1
 		transition: all 600ms ease
 		transform: translateX(0px)
+		text-decoration: none !important
+		text-decoration-line: none !important
 .headroom--unpinned
   position: auto
 
@@ -60,9 +62,9 @@ div
 .headroom-unpinned
 	&.headroom
 		.skipintro
-				opacity: 0
-				transition: all 600ms ease
-				transform: translateX(300%)	// display: none !important
+			opacity: 0
+			transition: all 600ms ease
+			transform: translateX(300%)	// display: none !important
 
 .react-parallax-bgimage
 	top: -100px
@@ -71,7 +73,7 @@ div
 .react-reveal
 	max-width: 100%
 	transition: all 1000ms ease
-	animation-name: override !important
+	// animation-name: override !important
 .parallax-outer
 	position: absolute
 	top: 0
@@ -80,7 +82,7 @@ div
 	height: 100%
 	overflow: hidden
 	&.texts,
-	&.texts-parallax
+	&.parallax-texts
 		position: relative
 		top: initial
 		left: initial
@@ -91,9 +93,9 @@ div
 	display: flex
 	align-items: center
 	justify-content: center
-.texts-parallax
+.parallax-texts
 	.parallax-inner
-		// max-width: 1100px
+		max-width: 90%
 .parallax-image
 	width: 100%
 	height: calc(110% + 150px)
