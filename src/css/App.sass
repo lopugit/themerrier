@@ -70,7 +70,8 @@ div
 	max-width: 100%
 .react-reveal
 	max-width: 100%
-
+	transition: all 1000ms ease
+	animation-name: override !important
 .parallax-outer
 	position: absolute
 	top: 0
@@ -90,6 +91,9 @@ div
 	display: flex
 	align-items: center
 	justify-content: center
+.texts-parallax
+	.parallax-inner
+		// max-width: 1100px
 .parallax-image
 	width: 100%
 	height: calc(110% + 150px)

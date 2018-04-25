@@ -11,8 +11,6 @@ class Section extends Component {
 			section: props.section
 		}
 	}
-
-
 	render() {
 		// simple check for section data
 		if(this.state.section){
@@ -24,30 +22,38 @@ class Section extends Component {
 				if(this.state.section.content.value.values){
 					content = []
 					// loop all content values
-					var flip = false
+					var flip = this.state.section.content.flip || false
 					for(var i=0; i < this.state.section.content.value.values.length; i++){
 						var noReact = this.state.section.content.noReactOn && this.state.section.content.noReactOn.indexOf && this.state.section.content.noReactOn.indexOf(i) >= 0
 						console.log(this.state.section.content)
 						if(!this.state.section.content.noAnimateOnScroll && !noReact){
-							var offsetXMax = 30
-							var offsetXMin = -15
 							if(!this.state.section.content.noTextParallax){
-								var subcontent = <Fade 
-																	left={!flip}
-																	right={flip}
-																	// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
-																	// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
-																	key={i} 
-																	className="texts" 
-																	>
-																	<Parallax
-																		className="texts-parallax"
-																		offsetXMax={(flip ? offsetXMin - 10 : offsetXMax) +'%'}
-																		offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
-																	>
-																		<div >{ this.state.section.content.value.values[i] }</div>
-																	</Parallax>
-																</Fade>
+								// var subcontent = <Fade 
+								// 									left={!flip}
+								// 									right={flip}
+								// 									// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
+								// 									// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
+								// 									key={i} 
+								// 									className="texts" 
+								// 									>
+								// 									<Parallax
+								// 										className="texts-parallax"
+								// 										offsetXMax={(flip ? offsetXMin : offsetXMax - 5) +'%'}
+								// 										offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
+								// 									>
+								// 										<div >{ this.state.section.content.value.values[i] }</div>
+								// 									</Parallax>
+								// 								</Fade>
+
+								var subcontent = <Parallax
+																	className={"texts-parallax n"+i}
+																	offsetXMax={(flip ? '8%' : '5%')}
+																	offsetXMin={(flip ? '24%' : '-5%')}
+																>
+																	<div >{ this.state.section.content.value.values[i] }</div>
+																</Parallax>
+																
+								// flips the direction of fade and parallax at the same time
 								flip = !flip
 							} else {
 								var subcontent = <Fade 
