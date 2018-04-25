@@ -58,7 +58,7 @@ class App extends Component {
 						value: {
 							values: [
 								<Headroom disableInlineStyles>
-									<div className={"skipintro"}>skip intro</div>
+									<a href="#moreinfo" className={"skipintro"}>skip intro</a>
 								</Headroom>,
 								"We believe society lost it's way some time ago.",
 								"We're going to change the world for the better."
