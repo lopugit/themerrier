@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
-import {Parallax,Background} from 'react-parallax'
+// import {Parallax,Background} from 'react-parallax'
+import { Parallax } from 'react-scroll-parallax';
 import '../css/Section.sass'
 
 class Section extends Component {
@@ -47,19 +48,28 @@ class Section extends Component {
 					content = this.state.section.content.value
 				}
 			}
+			var parallax
 			if(this.state.section.bgImage){
-				content = <Parallax className={"section "+this.state.section.classes} strength="100" bgHeight="auto" bgImage={this.state.section.bgImage}>{content}</Parallax>
-			} else {
-				content = <div className={"section "+ this.state.section.classes } style={this.state.section.style}>
-										{ content }
+				parallax = <Parallax 
+										offsetYMax={'50%'}
+										offsetYMin={'-50%'}
+										offsetXMax={'50%'}
+										offsetXMin={'-50%'}
+										slowerScrollRate
+									>
+									<div className="section parallax-image" style={{backgroundImage: 'url('+this.state.section.bgImage+')'}}>
 									</div>
+									</Parallax> 
 			}
 			return <div 
-							className={"section-container "+this.state.section.bgImage ? 'parallax-section-container' : undefined} 
+							className={"section-container "+(this.state.section.bgImage ? 'parallax-section-container' : '')} 
 							id={this.state.section.id}
 							>
 					<div className="section-positioner">
-						{ content }
+						<div className={"section "+ this.state.section.classes } style={this.state.section.style}>
+							{ parallax }
+							{ content }
+						</div>
 					</div>
 				</div>
 		} else {

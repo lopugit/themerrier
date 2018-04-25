@@ -9,6 +9,9 @@ var beachSand = require('./assets/img/beach-sand.jpg')
 var themerrierlogo = require('./assets/img/themerrierlogo.png')
 var themerrierlogowhite = require('./assets/img/themerrierlogowhite.png')
 var greenpaddock = require('./assets/img/green-paddock.jpeg')
+// var greenpaddock = require('./assets/img/passion.jpeg')
+// var greenpaddock = require('./assets/img/passion2.jpeg')
+// var greenpaddock = require('./assets/img/passion3.jpeg')
 var wewantyou = require('./assets/img/wewantyou.jpg')
 
 class App extends Component {
@@ -163,17 +166,6 @@ class App extends Component {
 		}
 	}
 	render() {
-		// return pug`
-		//   <div className="App">
-		//     <header className="App-header">
-		//       <img src={logo} className="App-logo" alt="logo" />
-		//       <h1 className="App-title">Welcome to React</h1>
-		//     </header>
-		//     <p className="App-intro">
-		//       To get started, edit <code>src/App.js</code> and save to reload.
-		//     </p>
-		//   </div>
-		// `;
 		return 	<div className="App">
 							<ParallaxProvider>
 								<Sections sections={this.state.sections} />
