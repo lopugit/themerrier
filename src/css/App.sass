@@ -1,0 +1,65 @@
+.App
+	font-family: evogria
+div
+	box-sizing: border-box
+.App-logo
+	animation: App-logo-spin infinite 20s linear
+	height: 80px
+
+
+.App-header
+	background-color: #222
+	height: 150px
+	padding: 20px
+	color: white
+
+
+.App-title
+	font-size: 1.5em
+
+
+.App-intro
+	font-size: large
+
+
+@keyframes App-logo-spin
+	from 
+		transform: rotate(0deg) 
+	to 
+		transform: rotate(360deg) 
+
+.grey
+	color: #4d4d56
+.white
+	color: #FFF
+.pink
+	color: #6c70dd
+@font-face
+	font-family: evogria
+	font-style: normal
+	font-weight: normal
+	src: url(./fonts/Evogria.otf) format('opentype')
+@font-face
+	font-family: kannada
+	font-style: normal
+	font-weight: normal
+	src: url(./fonts/Kannada.ttc) format('opentype')
+
+.headroom
+	.skipintro
+		opacity: 1
+		transition: all 600ms ease
+		transform: translateX(0px)
+.headroom--unpinned
+  position: auto
+
+.headroom--pinned
+  position: auto
+  // transform: translateY(0%);
+.headroom--scrolled,
+.headroom-unpinned
+	&.headroom
+		.skipintro
+				opacity: 0
+				transition: all 600ms ease
+				transform: translateX(300%)	// display: none !important

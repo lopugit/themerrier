@@ -1,81 +1,172 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Sections from './components/Sections'
-import logo from './logo.svg';
-import './App.css';
-
-console.log('window: ', window)
-// const pug = window.pug
+import Headroom from 'react-headroom'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './css/App.sass';
+import './css/animate.min.css'
+var beachSand = require('./assets/img/beach-sand.jpg')
+var themerrierlogo = require('./assets/img/themerrierlogo.png')
+var themerrierlogowhite = require('./assets/img/themerrierlogowhite.png')
+var greenpaddock = require('./assets/img/green-paddock.jpeg')
+var wewantyou = require('./assets/img/wewantyou.jpg')
 
 class App extends Component {
-	constructor(props){
+		constructor(props){
 		super(props)
+
 		this.state = {
 			sections: [
 				{
-					background: {
-						type: "colour",
-						value: "#97d7db",
+					style: {
+						background: "#97d7db"
 					},
 					content: {
-						type: 'image',
-						value: 'static/themerrier.png',
-						align: 'left'
+						type: 'react',
+						value: <img className="themerrierlogo" src={themerrierlogo}></img>,
+						noAnimateOnScroll: true
 					},
-					id: "test"
+					id: "themerrierlogo"
 				},
 				{
-					background: {
-						type: "colour",
-						value: "#97d7db"
-					}
+					style: {
+						background: "#97d7db",
+					},
+					classes: 'grey',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"We're planning something.",
+								"Something big.",
+								"We're creating it right now.",
+								"It's a merrier revolution."
+							]
+						},
+						noAnimateOnScroll: true
+					},
+					id: "planningsomething"
 				},
 				{
-					background: {
-						type: "image",
-						value: "url"
-					}
+					style: {
+						backgroundImage: 'url('+beachSand+')',
+					},
+					classes: 'white',
+					content: {
+						type: 'react',
+						noReactOn: [
+							0
+						],
+						value: {
+							values: [
+								<Headroom disableInlineStyles>
+									<div className={"skipintro"}>skip intro</div>
+								</Headroom>,
+								"We believe society lost it's way some time ago.",
+								"We're going to change the world for the better."
+							]
+						}
+					},
+					id: "societiesWay"
 				},
 				{
-					background: {
-						type: "colour",
-						value: "#f06ba3"
-					}
+					style: {
+						background: "#f06ba3"
+					},
+					classes: 'grey',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"It's time to give power back to the people.",
+								"To the creators. Thinkers, leaders, and experts."
+							]
+						}
+					},
+					id: "powerback"
 				},
 				{
-					background: {
-						type: "image",
-						value: "url"
-					}
+					style: {
+						backgroundImage: 'url('+greenpaddock+')',
+					},
+					classes: 'white',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"To the people with a passion.",
+								"It's time to empower these people so they can have a real impact.",
+								"It's time to help those with a voice create a career from that voice."
+							]
+						}
+					},
+					id: "peoplepassion"
 				},
 				{
-					background: {
-						type: "colour",
-						value: "#f06ba3"
-					}
+					style: {
+						background: "#f69264"
+					},
+					classes: 'grey',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"And with that impact, they will do something good for the world.",
+								"We're planning a revolution."
+							]
+						}
+					},
+					id: "impact"
+
 				},
 				{
-					background: {
-						type: "image",
-						value: "url"
-					}
+					style: {
+						backgroundImage: 'url('+wewantyou+')'
+					},
+					classes: 'white',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"We want you to join us?"
+							]
+						}
+					},
+					id: "wewantyou"
 				},
 				{
-					background: {
-						type: "colour",
-						value: "#6c70dd"
-					}
-				},
-				{
-					background: {
-						type: "colour",
-						value: "#6c70dd"
-					}
+					style: {
+						background: "#6c70dd"
+					},
+					classes: 'white',
+					content: {
+						type: 'react',
+						value: {
+							values: [
+								"Are you a:",
+								<ul>
+									<li>creator</li>
+									<li>brand</li>
+									<li>cause</li>
+									<li>customer</li>
+								</ul>,
+								<div className="smaller">
+									For more info fill in the box below:
+								</div>,
+								<form className="moreinfoform">
+									<input style={{color: "#6c70dd"}} type="email" placeholder="email" />
+								</form>,
+								<div className="themerrierbottom" >
+									<img src={ themerrierlogowhite } />
+									<span>The Merrier</span>
+								</div>
+							]
+						}
+					},
+					id: "moreinfo"
 				}
 			]
 		}
 	}
-
-
 	render() {
 		// return pug`
 		//   <div className="App">
@@ -88,7 +179,9 @@ class App extends Component {
 		//     </p>
 		//   </div>
 		// `;
-		return <Sections sections={this.state.sections} />
+		return 	<div className="App">
+							<Sections sections={this.state.sections} />
+						</div>
 	}
 }
 

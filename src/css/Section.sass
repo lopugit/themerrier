@@ -1,0 +1,261 @@
+.section-container,
+.section-positioner,
+.section
+	width: 100%
+	max-width: 100%
+	height: auto
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	position: relative
+
+
+.section
+	padding: 170px 120px
+	$font-size: 90px
+	font-size: $font-size
+	letter-spacing: -1px
+	text-transform: uppercase
+	line-height: $font-size + 4px
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-direction: column
+	background-size: cover
+	background-position: center center
+	max-width: 100%
+	.texts,
+	.react-reveal
+		margin-bottom: 0px
+		$font-size: 90px
+		font-size: $font-size
+		line-height: $font-size + 4px
+		width: 1300px
+		padding-right: 30px
+		max-width: 100%
+		&:last-child
+			margin-bottom: 0px !important
+		.skipintro
+			display: none
+	@media(max-width: 1320px)
+		padding: 100px 80px 100px 80px
+		.texts,
+		.react-reveal
+			// $font-size: $font-size
+			// font-size: $font-size
+			// line-height: $font-size + 4px
+			// margin-bottom: 20px
+	@media(max-width: 1275px)
+		padding: 100px 80px 100px 80px
+		.texts,
+		.react-reveal
+			$font-size: 75px
+			font-size: $font-size
+			line-height: $font-size + 4px
+			// margin-bottom: 20px
+	@media(max-width: 1120px)
+		padding: 100px 60px 40px 60px
+		.texts,
+		.react-reveal
+			$font-size: 60px
+			font-size: $font-size
+			line-height: $font-size + 4px
+			// margin-bottom: 20px
+	@media(max-width: 900px)
+		padding: 100px 30px 50px 50px
+		.texts,
+		.react-reveal
+			margin-bottom: 40px
+	@media(max-width: 480px)
+		padding: 40px
+		padding-top: 100px
+		padding-bottom: 50px
+		.texts,
+		.react-reveal
+			$font-size: 40px
+			font-size: $font-size
+			line-height: $font-size + 4px
+			margin-bottom: 35px	
+	@media(max-width: 350px)
+		padding: 100px 30px 30px 30px
+		.texts,
+		.react-reveal
+			$font-size: 35px
+			font-size: $font-size
+			line-height: $font-size + 4px
+			margin-bottom: 30px
+
+#themerrierlogo
+	.section
+		padding-top: 160px
+		padding-bottom: 145px
+		img
+			max-width: 165px
+			margin-left: -25px
+	@media(max-width: 700px)
+		.section
+			padding-top: 35px
+			padding-bottom: 35px
+			img
+				max-width: 170px
+				margin-left: -27px
+#planningsomething
+	.section
+		padding-top: 10px
+		padding-right: 10px
+		padding-bottom: 240px
+	@media(max-width: 1120px)
+		.section
+			padding-bottom: 80px
+			// .texts,
+			// .react-reveal
+			// 	$font-size: 60px
+			// 	font-size: $font-size
+			// 	line-height: $font-size + 4px
+#societiesWay
+	.section
+		padding-top: 170px !important
+		padding-bottom: 170px !important
+		.texts,
+		.react-reveal
+			margin-bottom: 0px
+		@media(max-width: 700px)
+			padding-top: 150px !important
+			padding-bottom: 150px !important
+			// padding: 40px
+			.skipintro
+				display: block
+				color: #4d4d56
+				position: absolute
+				top: 15px
+				font-size: 18px
+				// margin-top: -10px
+				// left: 0
+			.texts,
+			.react-reveal
+				margin-bottom: 20px
+#powerback
+	.section
+		padding-top: 150px !important
+		padding-bottom: 150px !important		
+		@media(max-width: 700px)
+			padding-top: 110px !important
+			padding-bottom: 110px !important
+
+			// padding: 40px
+			.texts,
+			.react-reveal
+				margin-bottom: 20px
+
+#impact
+	.section
+		padding-top: 180px !important
+		padding-bottom: 300px !important
+		@media(max-width: 700px)
+			padding-top: 140px !important
+			padding-bottom: 140px !important
+
+#wewantyou
+	.section
+		padding-top: 210px !important
+		padding-bottom: 185px !important
+		@media(max-width: 1700px)
+			background-size: auto
+			padding-top: 140px !important
+			padding-bottom: 140px !important
+	
+#moreinfo
+	.section
+		.texts,
+		.react-reveal
+			width: 100%
+			max-width: 100%
+			.smaller
+				max-width: 100%
+				width: 1000px !important
+		.moreinfoform
+			max-width: 100%
+			padding-right: 35px
+			padding-top: 240px
+			padding-bottom: 300px
+			input
+				padding: 15px
+				padding-left: 24px
+				background: white
+				font-size: 70px
+				max-width: 100%
+				outline: none !important
+				padding-bottom: 16px
+				text-transform: uppercase
+				font-family: evogria
+				width: 100%
+				&::placeholder
+					text-transform: uppercase
+					font-family: evogria
+					color: #6c70dd
+		.themerrierbottom
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			flex-direction: row
+			padding-top: 20px
+			img
+				margin-left: -11px
+				$size: 140px
+				max-width: $size
+				max-height: $size
+			span
+				font-size: 55px
+				margin-left: 25px
+				margin-top: 8px
+				text-transform: capitalize
+				font-family: 'kannada'
+				// font-weight: 300
+				letter-spacing: 0px
+
+		@media(max-width: 1700px)
+			.moreinfoform
+				max-width: 100%
+				padding-right: 35px
+				padding-top: 180px
+				padding-bottom: 180px
+				input
+					padding: 10px
+					background: white
+					font-size: 60px
+					max-width: 100%
+					outline: none !important
+					padding-bottom: 6px
+					text-transform: uppercase
+					font-family: evogria
+					width: 100%
+					&::placeholder
+						text-transform: uppercase
+						font-family: evogria
+						color: #6c70dd
+		@media(max-width: 1700px)
+			.themerrierbottom
+				padding-top: 20px
+				img
+					margin-left: -11px
+					$size: 90px
+					max-width: $size
+					max-height: $size
+				span
+					font-size: 40px
+					margin-left: 20px
+					margin-top: 8px
+					text-transform: capitalize
+					font-family: 'helvetica'
+					font-weight: 300
+					letter-spacing: 0px
+			.moreinfoform
+				max-width: 100%
+				padding-right: 35px
+				padding-top: 110px
+				padding-bottom: 110px
+				padding-right: 0px
+.react-reveal
+	width: 100%
+	max-width: 100%
+	// overflow: hidden
