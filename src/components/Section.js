@@ -53,8 +53,6 @@ class Section extends Component {
 				parallax = <Parallax 
 										offsetYMax={'50%'}
 										offsetYMin={'-50%'}
-										offsetXMax={'50%'}
-										offsetXMin={'-50%'}
 										slowerScrollRate
 									>
 									<div className="section parallax-image" style={{backgroundImage: 'url('+this.state.section.bgImage+')'}}>
