@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Sections from './components/Sections'
 import Headroom from 'react-headroom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { ParallaxProvider } from 'react-scroll-parallax';
 import './css/App.sass';
 import './css/animate.min.css'
 var beachSand = require('./assets/img/beach-sand.jpg')
@@ -47,9 +48,7 @@ class App extends Component {
 					id: "planningsomething"
 				},
 				{
-					style: {
-						backgroundImage: 'url('+beachSand+')',
-					},
+					bgImage: beachSand,
 					classes: 'white',
 					content: {
 						type: 'react',
@@ -85,9 +84,7 @@ class App extends Component {
 					id: "powerback"
 				},
 				{
-					style: {
-						backgroundImage: 'url('+greenpaddock+')',
-					},
+					bgImage: greenpaddock,
 					classes: 'white',
 					content: {
 						type: 'react',
@@ -119,9 +116,7 @@ class App extends Component {
 
 				},
 				{
-					style: {
-						backgroundImage: 'url('+wewantyou+')'
-					},
+					bgImage: wewantyou,
 					classes: 'white',
 					content: {
 						type: 'react',
@@ -180,7 +175,9 @@ class App extends Component {
 		//   </div>
 		// `;
 		return 	<div className="App">
-							<Sections sections={this.state.sections} />
+							<ParallaxProvider>
+								<Sections sections={this.state.sections} />
+							</ParallaxProvider>
 						</div>
 	}
 }
