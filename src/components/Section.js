@@ -29,21 +29,21 @@ class Section extends Component {
 						if(!this.state.section.content.noAnimateOnScroll && !noReact){
 							if(!this.state.section.content.noTextParallax){
 								// var subcontent = <Fade 
-								// 									left={!flip}
-								// 									right={flip}
-								// 									// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
-								// 									// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
-								// 									key={i} 
-								// 									className="texts" 
-								// 									>
-								// 									<Parallax
-								// 										className="texts-parallax"
-								// 										offsetXMax={(flip ? offsetXMin : offsetXMax - 5) +'%'}
-								// 										offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
-								// 									>
-								// 										<div >{ this.state.section.content.value.values[i] }</div>
-								// 									</Parallax>
-								// 								</Fade>
+									// 									left={!flip}
+									// 									right={flip}
+									// 									// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
+									// 									// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
+									// 									key={i} 
+									// 									className="texts" 
+									// 									>
+									// 									<Parallax
+									// 										className="texts-parallax"
+									// 										offsetXMax={(flip ? offsetXMin : offsetXMax - 5) +'%'}
+									// 										offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
+									// 									>
+									// 										<div >{ this.state.section.content.value.values[i] }</div>
+									// 									</Parallax>
+									// 								</Fade>
 
 								var subcontent = <Parallax
 																	className={"texts-parallax n"+i}
