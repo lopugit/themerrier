@@ -24,19 +24,41 @@ class Section extends Component {
 				if(this.state.section.content.value.values){
 					content = []
 					// loop all content values
+					var flip = false
 					for(var i=0; i < this.state.section.content.value.values.length; i++){
 						var noReact = this.state.section.content.noReactOn && this.state.section.content.noReactOn.indexOf && this.state.section.content.noReactOn.indexOf(i) >= 0
 						console.log(this.state.section.content)
 						if(!this.state.section.content.noAnimateOnScroll && !noReact){
-							var subcontent =	<Fade 
-																	left
+							var offsetXMax = 30
+							var offsetXMin = -15
+							if(!this.state.section.content.noTextParallax){
+								var subcontent = <Fade 
+																	left={!flip}
+																	right={flip}
 																	// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
 																	// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
 																	key={i} 
 																	className="texts" 
-																>
-								<div >{ this.state.section.content.value.values[i] }</div>
-							</Fade>
+																	>
+																	<Parallax
+																		className="texts-parallax"
+																		offsetXMax={(flip ? offsetXMin - 10 : offsetXMax) +'%'}
+																		offsetXMin={(flip ? offsetXMax + 15 : offsetXMin +10) +'%'}
+																	>
+																		<div >{ this.state.section.content.value.values[i] }</div>
+																	</Parallax>
+																</Fade>
+								flip = !flip
+							} else {
+								var subcontent = <Fade 
+																	left
+																	// left={this.state.section.content.fadeInDirection == 'left' ? true : this.state.section.content.fadeInDirection == 'right' ? false : true } 
+																	// right={this.state.section.content.fadeInDirection == 'right' ? true : false} 
+																	key={i} 
+																	>
+																	<div >{ this.state.section.content.value.values[i] }</div>
+																</Fade>
+							}
 						} else {
 							var subcontent = <div className="texts" key={i}>{ this.state.section.content.value.values[i] }</div>
 						}
@@ -51,10 +73,8 @@ class Section extends Component {
 			var parallax
 			if(this.state.section.bgImage){
 				parallax = <Parallax 
-										offsetYMax={'50%'}
-										offsetYMin={'-50%'}
-										offsetXMax={'50%'}
-										offsetXMin={'-50%'}
+										offsetYMax={'40%'}
+										offsetYMin={'-20%'}
 										slowerScrollRate
 									>
 									<div className="section parallax-image" style={{backgroundImage: 'url('+this.state.section.bgImage+')'}}>

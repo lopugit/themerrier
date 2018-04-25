@@ -158,7 +158,8 @@ class App extends Component {
 									<span>The Merrier</span>
 								</div>
 							]
-						}
+						},
+						noTextParallax: true,
 					},
 					id: "moreinfo"
 				}
